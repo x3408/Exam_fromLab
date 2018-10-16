@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+  <definition name="default.main" template="/WEB-INF/views/layout/main.jsp">
+       <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+       <put-attribute name="left" value="/WEB-INF/views/layout/left.jsp" />
+       <put-attribute name="main" value="" />
+       <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+   </definition>
+
+   <definition name="fyxmt.user.mange" extends="default.main">
+       <put-attribute name="title" value="用户管理" />
+       <put-attribute name="main" value="/WEB-INF/views/usersManaging.jsp" />
+   </definition>
+
+    <definition name="fyxmt.userApply.mange" extends="default.main">
+        <put-attribute name="title" value="用户管理" />
+        <put-attribute name="main" value="/WEB-INF/views/applysManaging.jsp" />
+    </definition>
+
+
+
+    <definition name="fyxmt.question.mange" extends="default.main">
+        <put-attribute name="title" value="题目管理" />
+        <put-attribute name="main" value="/WEB-INF/views/questionManaging.jsp" />
+    </definition>
+
+    <definition name="fyxmt.testPaper.mange" extends="default.main">
+        <put-attribute name="title" value="题目管理" />
+        <put-attribute name="main" value="/WEB-INF/views/paperManaging.jsp" />
+    </definition>
+
+
+    <definition name="fyxmt.testPaper.paperDetail" extends="default.main">
+        <put-attribute name="title" value="试卷详情" />
+        <put-attribute name="main" value="/WEB-INF/views/paperDetail.jsp" />
+    </definition>
+
+
+    <definition name="fyxmt.material.mange" extends="default.main">
+        <put-attribute name="title" value="资料管理" />
+        <put-attribute name="main" value="/WEB-INF/views/materialManaging.jsp" />
+    </definition>
+
+
+
+
+
+
+</tiles-definitions>

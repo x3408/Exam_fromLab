@@ -1,0 +1,67 @@
+.ztree * {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 微软雅黑
+}
+td.details-control {
+    background: url('../images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../images/details_close.png') no-repeat center center;
+}
+.margintp{
+    margin-top: 15px;
+}
+.form-group .col-xs-2 {
+
+}
+/*.taxselect{
+width: 94px;
+height: 34px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}*/
+/*.abmsg{
+    position: absolute;
+    top: 38px;
+}*/
+/*.my-style table tbody tr:nth-child(1) td{
+    background: none;
+}
+.my-style table tbody tr:nth-child(3) td{
+    background: none;
+}
+.my-style table tbody tr:nth-child(5) td{
+    background: none;
+}
+.my-style table tbody tr:nth-child(7) td{
+    background: none;
+}*/
+.secondIcon{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+
+.tj tbody tr td:nth-child(1){
+    border-right: 1px solid #ddd;
+}
+.tj tbody tr td:nth-child(3n+1){
+    border-right: 1px solid #ddd;
+}
+.mustInput{
+    color: red;
+    padding: 0 5px;
+}
+.stage-out{
+    float: right;
+    line-height: 46px;
+    padding-right: 100px;
+    color: white;
+}
+.myInput{
+    width: 150px;
+    margin-right: 10px;
+}

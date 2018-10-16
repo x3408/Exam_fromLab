@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+               			http://www.springframework.org/schema/data/jpa
+				     	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+
+    <bean id="configProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <!--加载属性文件-->
+        <property name="locations">
+            <list>
+                <value>classpath*:application.properties</value>
+            </list>
+        </property>
+    </bean>
+    <!--开启注解扫描-->
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.exam.www.entity"/>
+
+    <context:component-scan base-package="com.exam.www.dto"/>
+
+    <context:component-scan base-package="com.exam.www.controller"/>
+
+    <context:component-scan base-package="com.exam.www.service"/>
+
+    <context:component-scan base-package="com.exam.www.exception"/>
+
+    <context:component-scan base-package="com.exam.www.controller"/>
+
+    <context:component-scan base-package="com.exam.www.service"/>
+
+    <!--开启事务注解-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--数据源-->
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="mysql"></property>
+        <property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml"></property>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="showSql" value="true"></property>
+                <property name="database" value="MYSQL"></property>
+                <property name="generateDdl" value="true"></property>
+            </bean>
+        </property>
+    </bean>
+    <!--事务管理器-->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+    <!-- (spring data)需要在 <beans> 标签中增加对 jpa 命名空间的引用  -->
+    <jpa:repositories base-package="com.exam.www.repository"
+                      entity-manager-factory-ref="entityManagerFactory"
+                      transaction-manager-ref="transactionManager"/>
+    <tx:annotation-driven/>
+    <!-- 建立视图内拦截器来解决JPA中访问延迟加载属性时产生的无会话异常 -->
+    <!-- LazyInitializationException: could not initialize proxy no session -->
+    <!-- 此拦截器会注入到servlet配置中的DefaultAnnotationHandlerMapping中 -->
+    <bean name="openEntityManagerInViewInterceptor"
+          class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor">
+        <property name="entityManagerFactory">
+            <ref bean="entityManagerFactory"/>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="interceptors">
+            <list>
+                <ref bean="openEntityManagerInViewInterceptor"/>
+            </list>
+        </property>
+    </bean>
+</beans>

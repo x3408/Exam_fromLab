@@ -1,0 +1,22 @@
+.logo-name{
+    color: #204d74;
+    font-size: 70px;
+    margin: 55px 0;
+}
+.col-red{
+    color: red;
+}
+.dataTables_wrapper .btn{
+    padding: 6px;
+}
+.myInput{
+    width: 200px;
+    height: 34px;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+}
+.myFooter{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

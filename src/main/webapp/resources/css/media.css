@@ -1,0 +1,318 @@
+/* 小于 768px */
+@media (max-width: 768px) {
+
+}
+/* 大于 768px*/
+@media (min-width: 768px) {
+
+}
+
+/* header*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 99;
+    background-color: #ffffff;
+    -webkit-box-shadow: 1px 1px 3px 0 #aaa;
+    -moz-box-shadow: 1px 1px 3px 0  #aaa;
+    box-shadow: 1px 1px 3px 0  #aaa;
+}
+.header {
+    height: 50px;
+    line-height: 50px;
+}
+.header .webTitle {
+    padding-left:260px;
+    font-size: 20px;
+}
+.header .webTitle .logo {
+    padding: 10px 0;
+}
+.header .webTitle img {
+    height: 33px;
+    padding-right: 15px;
+}
+.header .userBtn {
+    padding-right:20px;
+    line-height: 50px;
+}
+.header .userBtn a {
+    position: relative;
+    color: #666;
+    font-size: 16px;
+    padding-left: 20px;
+}
+.header .userBtn a i.fa {
+    padding-right:5px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    height: 32px;
+    line-height: 32px;
+    z-index: 99;
+    background-color: #ffffff;
+    -webkit-box-shadow: 1px 1px 3px 0 #aaa;
+    -moz-box-shadow: 1px 1px 3px 0  #aaa;
+    box-shadow: 1px 1px 3px 0  #aaa;
+}
+/* side nav */
+.sideNav {
+    position: absolute;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    /*border-left:5px solid #7bcaff;*/
+    z-index: 99;
+    background-color: #2a2e34;
+    -webkit-box-shadow: 1px 1px 3px 0 #aaa;
+    -moz-box-shadow: 1px 1px 3px 0  #aaa;
+    box-shadow: 1px 1px 3px 0  #aaa;
+}
+.sideNav .sideNavBtn {
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    background-color: #058be9;
+    font-size: 16px;
+    color: #fff;
+}
+.sideNav .sideNavBtn .team {
+    padding: 0 15px;
+    height: 50px;
+    line-height:50px;
+}
+.sideNav .sideNavBtn .team a {
+    color: #fff;
+}
+.sideNav .sideNavBtn .teamTree {
+    display: none;
+    position: absolute;
+    background: #058be9;
+    box-shadow: 1px 1px 3px 0 #000;
+    width: 100%;
+    padding:12px 15px;
+    top: 50px;
+    left: 0;
+    z-index: 99;
+}
+.sideNav .sideNavBtn .user {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    background-color: #003667;
+}
+.sideNav .sideNavBtn .menuBtn {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    z-index: 999;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: url("../images/menu.png") no-repeat center;
+}
+.sideNav .sideNavBtn .menuBtn i.fa {
+    color: #fff;
+    cursor: pointer;
+}
+.sideNav .sideNavBtn .menuBtn .label {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sideNav .sideNavList {
+    width:100%;
+    height: 100%;
+}
+.sideNav .sideNavList li {
+    position: relative;
+    box-shadow: 1px 1px 1px -1px #636363;
+    overflow: hidden;
+}
+.sideNav .sideNavList li a {
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 15px;
+    width: 100%;
+    vertical-align: middle;
+}
+.sideNav .sideNavList li a.top {
+    border-left: 2px solid #fff;
+    box-shadow: 1px 1px 1px -1px #636363;
+    font-weight: bold;
+}
+.sideNav .sideNavList li a.active {
+    background-color: #646d7d;
+}
+.sideNav .sideNavBtn  .menu{
+    width:154px;
+    background-color: #fff;
+    color: #676767;
+    text-align: left;
+    font-size: 14px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    line-height: 32px;
+    -webkit-box-shadow:0 0 15px rgba(218,218,218, .5);
+    -moz-box-shadow:0 0 15px rgba(218,218,218, .5);
+    box-shadow:0 0 15px rgba(218,218,218, .5);
+    display: none;
+}
+.sideNav .sideNavBtn .menu ul li {
+    padding-left: 15px;
+}
+.sideNav .sideNavBtn .menu ul .underline {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.sideNav .sideNavBtn .menu ul {
+    padding: 25px;
+}
+.sideNav .sideNavList li.current a,
+.sideNav .sideNavList li a:hover {
+    color: #fff;
+}
+.sideNav .sideNavList li i.fa {
+    position: absolute;
+    top: 50%!important;
+    left: 15px;
+    margin-top: -7px;
+}
+.sideNav .sideNavList li .top i.fa {
+    right: 15px;
+    left: auto;
+}
+.sideNav .sideNavList li .secondMenu a.sub {
+    /*padding-left:35px;*/
+    padding: 6px 15px 6px 35px;
+}
+/* main */
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0 220px;
+    /*background-color: #fff;*/
+}
+.main .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 6px 12px;
+    background-color: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 3px 0 #aaa;
+    -moz-box-shadow: 1px 1px 3px 0  #aaa;
+    box-shadow: 1px 1px 3px 0  #aaa;
+}
+/*overlay*/
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+.mask .overlay {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: #fcfcfc;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 3px 0 #666;
+    -moz-box-shadow: 1px 1px 3px 0  #666;
+    box-shadow: 1px 1px 3px 0  #666;
+}
+.mask .overlay .photo {
+    width: 170px;
+    height: 210px;
+    border-radius: 6px;
+    margin-right: -190px;
+    overflow: hidden;
+}
+.mask .overlay .photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.mask .overlay .baseinfo {
+    width: 100%;
+    height: 211px;
+    padding-left: 190px;
+}
+.mask .overlay table {
+    width: 100%;
+}
+.mask .overlay table tr {
+    border: 1px solid #ccc;
+}
+.mask .overlay table td {
+    height: 35px;
+}
+.mask .overlay table td:nth-child(odd){
+    width:150px;
+    padding: 0 15px;
+    background-color: #fff;
+}
+.mask .overlay table td:nth-child(even){
+    background-color: #f2f2f2;
+}
+.mask .overlay .jobinfo {
+    position: relative;
+    border: 1px solid #ccc;
+}
+.mask .overlay .jobinfo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 94px;
+    background-color: #f2f2f2;
+}
+.mask .overlay .jobinfo .tabs {
+    position: relative;
+    z-index:1;
+    margin-bottom: -1px;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+.mask .overlay .jobinfo .tabs li {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+}
+.mask .overlay .jobinfo .tabs li.active {
+    background-color: #fff;
+}
+.mask .overlay .jobinfo .panels {
+    padding-left: 94px;
+}
+.mask .overlay .jobinfo .panels li.active {
+    display: block;
+}
+.mask .overlay .jobinfo .panels li {
+    display: none;
+    padding: 10px 15px;
+    border-left: 1px solid #ccc;
+}

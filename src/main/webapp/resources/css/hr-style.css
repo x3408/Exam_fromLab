@@ -1,0 +1,392 @@
+/*==============================  2016-11-1  ==========================================*/
+/*     login.html        */
+.login{
+    background: url("../images/hr/bg-welcome.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.login .loginWrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px ;
+    /*height: 640px;*/
+    margin: -200px 0 0 -160px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 4px;
+    /*background: url("../images/hr/bg-login.png") no-repeat center;*/
+}
+.login .title img{
+    margin: 10px auto;
+}
+.login .title{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.login .loginWrap .content{
+    padding: 40px ;
+}
+/*.login .loginWrap .content input{
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.login .loginWrap .content label{
+    padding-left: 20px;
+}*/
+
+/*    welcome.html     */
+.welcome {
+    background: url("../images/hr/bg-welcome.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.welcome .wrap{
+    width: 700px;
+    margin: 0 auto;
+}
+.welcome .title{
+    padding: 20px 50px  ;
+    margin: 0 200px;
+}
+.welcome .wrap p{
+    margin-top: 50px;
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+.welcome .wrap>img{
+    margin: 100px auto 0;
+    cursor: pointer;
+}
+
+/*     step.html      */
+.step{
+    background-color: #EFEFEF;
+    padding: 0;
+}
+.step .top{
+    height: 50px;
+    width: 100%;
+    background: url("../images/hr/bg-top-step.png") no-repeat;
+    /*background-size: 100% 100%;*/
+    overflow: hidden;
+}
+.step .top span{
+    display: inline-block;
+    width: 255px;
+    height: 50px;
+    border-right: 1px solid #5F9AFC;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+}
+.step .content{
+    padding: 50px 100px;
+}
+.step .content .item{
+    height: 320px;
+    position: relative;
+    box-shadow: 1px 1px 3px 0px #000;
+    cursor: pointer;
+}
+.step .content .item.item-1 {
+    background: url(../images/hr/step-1.png) no-repeat center;
+}
+.step .content .item.item-2 {
+    background: url(../images/hr/step-2.png) no-repeat center;
+}
+.step .content .item.item-3 {
+    background: url(../images/hr/step-3.png) no-repeat center;
+}
+.step .content .item.item-4 {
+    background: url(../images/hr/step-4.png) no-repeat center;
+}
+.step .content .item >img{
+    height: 360px ;
+    width: 260px;
+}
+.step .content .item .cover{
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    /*position: absolute;
+    left: 14px;
+    top: 0;*/
+    opacity: 0.7;
+}
+.step .content .item a img{
+    margin: 0 auto;
+}
+.step .content .item a>.title{
+    margin: 25px 0 10px;
+}
+.step .content .item .pass{
+    background-color: #3882B0;
+    display: none;
+}
+.step .content .active .pass{
+    display: block !important;
+}
+.step .content .active .waiting{
+    display: none !important;
+}
+.step .item .teamTree {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 130px;
+    right: 0;
+    color: #fff;
+    background: #058be9;
+    box-shadow: 1px 1px 3px 0px #000;
+    width: 100%;
+    overflow: hidden;
+}
+.step .item .teamTree a {
+    color: #fff;
+}
+
+/*     战略目标      */
+.flow-auto{
+    overflow: auto;
+}
+.node .item{
+    padding: 20px;
+}
+.node .item textarea{
+    width: 100%;
+    height: 200px;
+}
+.node .item .title img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .hr .sideNav .sideNavList li i.fa{
+        top: 29px;
+    }
+}
+
+/*     事业部定制战略目标表.      */
+.contentBox2{
+    margin-top: -50px;
+    position: relative;
+}
+.syb .content{
+    height: 90%;
+}
+.syb .my-tabs li{
+    /*border: 1px solid transparent;*/
+    float: left;
+    padding: 5px 12px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.syb .my-tabs .active{
+    /*border-radius: 2px;*/
+    /* border-bottom: 3px solid #50B057;*/
+    /*border: 1px solid #048DE7;*/
+    color: #fff;
+    background: #048DE7;
+}
+.syb .my-tabs{
+    overflow: hidden;
+}
+.syb .my-panels{
+    overflow: hidden;
+}
+.syb .history {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    max-height: 40%;
+    overflow: auto;
+}
+.syb .history>p{
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.syb .history a{
+    margin: 0 10px 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.syb .history .flag {
+    display: none;
+    overflow: hidden;
+}
+.syb .history .flag p {
+    float: left;
+    width: 50%;
+}
+.mask .box{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+.mask .content{
+    width: 100%;
+    height: 90%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    overflow: auto;
+}
+#myModal .btn-red{
+    margin-right: 20px;
+}
+
+/*     我的消息.      */
+.myNews li{
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 40px;
+}
+.myNews li p{
+    margin-bottom: 0;
+}
+.myNews li>i{
+    display: inline-block;
+    width: 29px;
+    height: 21px;
+    float: left;
+    background: url("../images/hr/icon-email.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 5px  -40px ;
+}
+.myNews .new>i{
+    background: url("../images/hr/icon-email-new.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.compare table a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.compare table span{
+    cursor: pointer;
+}
+.compare table tr{
+    border: 1px solid #ddd;
+}
+.compare table td{
+    padding: 10px;
+}
+
+/*     销售预算.      */
+.marB10{
+    margin-bottom: 10px;
+}
+.xsys-up{
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+.xsys-tab{
+    background-color: #E8E8E8;
+    color: #B0B0B0;
+    overflow: hidden;
+}
+.xsys-tab li{
+    float: left;
+/*    padding: 5px;
+    width: 100px;*/
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 25px;
+}
+.xsys-tab li i{
+    display: inline-block;
+
+}
+.xsys-tab .active{
+    background-color: #50B057;
+    color: #fff;
+    border-radius: 2px;
+}
+.xsys-tabItem input{
+    text-align: center;
+}
+.my-panels li{
+    display: none;
+}
+.my-panels .active{
+    display: block;
+}
+
+/*     教育经费.      */
+.jyjf .borderDiv{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-bottom: none;
+    height: 15px;
+}
+.jyjf .ys p{
+    margin-bottom: 5px;
+}
+.jyjf .ys input{
+    text-align: center;
+}
+
+
+
+/*     公司整体战略目标--会议记录.      */
+.node .item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    overflow: hidden;
+}
+.node .item .title img{
+    width: 19px;
+    margin-top: 10px;
+}
+.contentBox .content {
+    background: #EFEFEF;
+}
+@media (min-width: 768px){
+    .meeting .modal-dialog {
+        width: 90%;
+        margin: 30px auto;
+    }
+    .meeting .modal-body {
+        height: 550px;
+    }
+}
+
+/*     预算编制--销售预算.      */
+
+@media (min-width: 768px){
+    .yusuan .modal-dialog {
+        width: 1200px;
+        margin: 30px auto;
+    }
+    .yusuan2 .modal-dialog {
+        width: 800px;
+        margin: 30px auto;
+    }
+}
+
+.border-green{
+    border: 1px solid #50B057;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+.marT10{
+    margin-top: 10px;
+}
+.bg-none{
+    background: none !important;
+}
