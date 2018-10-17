@@ -204,15 +204,17 @@ public class PaperController {
                 result.setCode("-1");
             }
         }
+
+//        需求改变,第二次答题不需要重新申请
         //说明已申请过并被同意,这是第二次答题
-        List<Apply> applyList = iApplyService.selectTodayApplyByUId(user.getId(), 1);
+        /*List<Apply> applyList = iApplyService.selectTodayApplyByUId(user.getId(), 1);
         if (applyList.size() > 0 && applyList != null) {
             for (Apply apply : applyList) {
                 if (apply != null) {
                     iApplyService.deleteUserApplyById(apply.getId());
                 }
             }
-        }
+        }*/
         return result;
     }
 
