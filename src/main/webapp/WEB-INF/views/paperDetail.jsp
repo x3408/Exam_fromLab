@@ -65,6 +65,41 @@
                                     </c:if>
                                     </c:forEach>
                                 </div>
+                                <%--多选题--%>
+                                <div class="select">
+                                    <div class="title1"><i class="radius"></i>[多选题]</div>
+                                        <!--选择题一个小题-->
+                                        <c:forEach var="item" varStatus="status1" items="${paperDetails.list}">
+                                            <c:if test="${item.questionType==2}">
+                                                <div class="problem">
+                                                    <c:if test="${item.isRight==0&&item.personAnswer!=null}">
+                                                        <span style="color: red">错误</span>
+                                                    </c:if>
+                                                    <c:if test="${item.isRight==1}">
+                                                        <span style="color: limegreen">正确</span>
+                                                    </c:if>
+                                                    <c:if test="${item.personAnswer==null}">
+                                                        <span style="color: red">未答题</span>
+                                                    </c:if>
+                                                        <%--<span class="tip">[错误]1234</span>--%>
+                                                    <h4 class="questionTitle">${status1.count}.${item.questionTitle}
+                                                        （ <c:if test="${item.personAnswer!=null}">${item.personAnswer}</c:if>）</h4>
+                                                    <ul class="answer">
+                                                        <li><input type="checkbox" name="b1'+${status1.count}+'"  id="multi1"
+                                                                   value="1"/><span>A.${item.alternativeOption1}</span>
+                                                        </li>
+                                                        <li><input type="checkbox" name="b1'+${status1.count}+'" id="multi2"
+                                                                   value="1"/><span>B.${item.alternativeOption2}</span></li>
+                                                        <li><input type="checkbox" name="b1'+${status1.count}+'" id="multi3"
+                                                                   value="1"/><span>C.${item.alternativeOption3}</span>
+                                                        </li>
+                                                        <li><input type="checkbox" name="b1'+${status1.count}+'" id="multi4"
+                                                                   value="1"/><span>D.${item.alternativeOption4}</span></li>
+                                                    </ul>
+                                                </div>
+                                            </c:if>
+                                        </c:forEach>
+                                </div>
                                 <!--判断题-->
                                 <div class="select">
                                     <div class="title1"><i class="radius"></i>[判断题]</div>

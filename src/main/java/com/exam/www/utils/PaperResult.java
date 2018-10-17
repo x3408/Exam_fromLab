@@ -6,6 +6,7 @@ public class PaperResult {
     private Integer baseSum;//试卷总分值
     private Integer paperScore;//试卷得分
     private Integer choiceScore;//选择题总得分
+    private Integer multiScore;//多选题总得分
     private Integer packScore;//判断题总得分
 
     public Integer getBaseSum() {
@@ -38,5 +39,13 @@ public class PaperResult {
 
     public void setPackScore(Integer packScore) {
         this.packScore = packScore;
+    }
+
+    public Integer getMultiScore() {
+        return multiScore;
+    }
+
+    public void setMultiScore(Integer multiScore) {
+        this.multiScore = multiScore;
     }
 }
